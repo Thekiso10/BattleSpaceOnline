@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 import javax.swing.*;
 import javax.swing.border.Border;
 
+import Utils.Config;
 import Utils.Historial;
 import Utils.Music;
 import Hilos.HiloMusica;  
@@ -23,10 +24,12 @@ import Hilos.HiloMusica;
 	 private Partida partida;
 	 private Music music;
 	 private HiloMusica musica;
+	 private Config config;
 	 
-	 public Menu() {
+	 public Menu(Config config) {
+	 	 this.config = config;
 		 this.partida = new Partida();
-		 this.music = new Music(100);
+		 this.music = new Music(Integer.parseInt(this.config.getProperty("battleSpaceOnline.config.music.volume", "1")));
 		 //Cargar musica
 		 this.musica = new HiloMusica(this.music);
 		 musica.start();

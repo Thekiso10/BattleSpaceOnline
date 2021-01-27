@@ -509,7 +509,8 @@ public class Combate {
 					jframe.setVisible(false);
 					jframe.remove(this);
 					//cargar otra ves el menu
-					Menu m = new Menu();
+					//TODO Hay que arreglar esto
+					/*Menu m = new Menu();*/
 				}else {
 					orden = 0;
 					Rondas++;

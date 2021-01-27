@@ -20,6 +20,6 @@ public class HiloMusica extends Thread {
 	
 	public void stopMusicaMenu() {
 		this.detenerMusicaMenu = true;
-		this.musica.Stop();
+		this.musica.stop();
 	}
 };
