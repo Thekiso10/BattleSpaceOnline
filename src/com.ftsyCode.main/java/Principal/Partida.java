@@ -1,14 +1,19 @@
-package Principal;
+package principal;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import Utils.Historial;
-import Jugar.Equipo;
-import Jugar.MensageAtaque;
-import Jugar.Planetas;
+import hilos.HiloMusica;
+import utils.Historial;
+import jugar.Equipo;
+import jugar.MensageAtaque;
+import jugar.Planetas;
+import utils.Music;
 
 public class Partida {
+	//Musica
+	private Music music;
+	private HiloMusica hiloMusica;
 	//Craer Equipos
 	private Equipo equipo;
 	private Planetas planeta;
@@ -19,6 +24,15 @@ public class Partida {
 	private final int SIZE_MAX_TEAMS = 6;
 	
 	public Partida() {
+		this.equipo = new Equipo();
+		this.planeta = new Planetas();
+		this.ListaMsg = new ArrayList<MensageAtaque>();
+	}
+
+	public Partida(Music music, HiloMusica hiloMusica) {
+		this.music = music;
+		this.hiloMusica = hiloMusica;
+
 		this.equipo = new Equipo();
 		this.planeta = new Planetas();
 		this.ListaMsg = new ArrayList<MensageAtaque>();
@@ -111,7 +125,7 @@ public class Partida {
 			break;
 			
 		case -4:
-			text = "El tama�o maximo de caracteres es "+SIZE_MAX_TEAMS;
+			text = "El tamaño maximo de caracteres es "+SIZE_MAX_TEAMS;
 			break;
 			
 		default:
@@ -128,7 +142,7 @@ public class Partida {
 		
 		menu.add("| Jugar |");
 		menu.add("| Reglas del juego |");
-		menu.add("| Informaci�n |");
+		menu.add("| Información |");
 		menu.add("| Opciones de Sonido |");
 		menu.add("| Opciones de Historial |");
 		menu.add("| Salir |");
@@ -140,7 +154,7 @@ public class Partida {
 		ArrayList<String> info = new ArrayList<>();
 		
 		info.add("<html><center>Este juego ha estado desarrolado por Diogo entertainment�.<br>El Autor material es Diogo Assuncao.<br>Este juego esta bajo la protecion<br>del Copyright 2018-2019</center></html>");		
-		info.add("Versi�n 3.1");
+		info.add("Versión 0.1");
 		info.add("Contacto: diego_lyoko@hotmail.es");
 		
 		return info;
@@ -149,7 +163,7 @@ public class Partida {
 	public ArrayList<String> ObtenerMenuReglas() {
 		ArrayList<String> regla = new ArrayList<>();
 		
-		regla.add("<html><ul>Reglas del juego</ul><li>N�mero de vidas por equipo: 200</li><li>N�mero de misiles por ronda: 50</li><li>Los misiles de defensa cuestan el doble. Ejemplo: 10 misiles de ataque, te quedan 40 restantes, es decir 40/2 = 20 misiles de defensa</li></html>");
+		regla.add("<html><ul>Reglas del juego</ul><li>N�mero de vidas por equipo: 200</li><li>Número de misiles por ronda: 50</li><li>Los misiles de defensa cuestan el doble. Ejemplo: 10 misiles de ataque, te quedan 40 restantes, es decir 40/2 = 20 misiles de defensa</li></html>");
 		
 		return regla;
 	}
@@ -182,5 +196,8 @@ public class Partida {
 	public String getGanador() {
 		return ganador;
 	}
-	
+
+	public Music getMusic() {return this.music;}
+
+	public HiloMusica getHiloMusica() {return this.hiloMusica;}
 }

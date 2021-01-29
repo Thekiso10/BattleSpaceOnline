@@ -1,4 +1,4 @@
-package Jugar;
+package jugar;
 
 public class MensageAtaque {
 

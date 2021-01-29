@@ -1,4 +1,4 @@
-package Jugar;
+package jugar;
 
 import java.util.Random;
 

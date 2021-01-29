@@ -1,4 +1,4 @@
-package Jugar;
+package jugar;
 
 import java.awt.Color;
 import java.util.ArrayList;

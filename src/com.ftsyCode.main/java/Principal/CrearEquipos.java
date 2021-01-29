@@ -1,4 +1,4 @@
-package Principal;
+package principal;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -21,8 +21,8 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.border.Border;
 
-import Utils.Music;
-import Jugar.Equipo;
+import utils.Music;
+import jugar.Equipo;
 
 public class CrearEquipos {
 	

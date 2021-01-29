@@ -1,6 +1,6 @@
-package Hilos;
+package hilos;
 
-import Utils.Music;
+import utils.Music;
 
 public class HiloMusica extends Thread {
 	

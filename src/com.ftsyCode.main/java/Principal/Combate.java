@@ -1,4 +1,4 @@
-package Principal;
+package principal;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -23,9 +23,9 @@ import javax.swing.JTextPane;
 import javax.swing.SwingUtilities;
 import javax.swing.border.Border;
 
-import Utils.Music;
-import Jugar.Equipo;
-import Jugar.MensageAtaque;
+import utils.Music;
+import jugar.Equipo;
+import jugar.MensageAtaque;
 
 public class Combate {
 	
@@ -547,7 +547,7 @@ public class Combate {
 			}
 			
 			if(equiposVivos > 1) {
-				this.b2 = new JButton("Jugar");
+				this.b2 = new JButton("jugar");
 			}else {
 				this.b2 = new JButton("Acabar Juegos");
 				area.append("\nFin del juego\n");

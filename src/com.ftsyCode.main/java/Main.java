@@ -1,5 +1,5 @@
-import Principal.Menu;
-import Utils.Config;
+import principal.Menu;
+import utils.Config;
 
 import java.io.IOException;
 
